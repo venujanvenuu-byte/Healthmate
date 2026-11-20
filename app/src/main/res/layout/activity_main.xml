@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F4F8F6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HealthMate"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#168451"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your health, your progress."
+            android:textSize="16sp"
+            android:textColor="#66756D"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DAILY OVERVIEW"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:textColor="#168451"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today's Health Summary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#202C25"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="22dp"/>
+
+        <!-- Steps Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E1F4E9"
+            android:padding="22dp"
+            android:elevation="3dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👟  DAILY STEPS"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#168451"/>
+
+            <TextView
+                android:id="@+id/txtSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Steps Walked: 0"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#176B45"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <!-- Calories Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFF0E9"
+            android:padding="22dp"
+            android:elevation="3dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥  CALORIES BURNED"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#C65B32"/>
+
+            <TextView
+                android:id="@+id/txtCalories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calories Burned: 0 kcal"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#A7462C"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <!-- Water Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E5F2FF"
+            android:padding="22dp"
+            android:elevation="3dp"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💧  WATER INTAKE"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#176BB0"/>
+
+            <TextView
+                android:id="@+id/txtWater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Water Intake: 0 ml"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#176BB0"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Actions"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#202C25"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/btnAddRecord"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="+  Add Health Record"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#168451"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="View Health History"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#E1F4E9"
+            android:textColor="#168451"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stay consistent. Every step counts!"
+            android:textSize="13sp"
+            android:textColor="#87958D"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</ScrollView>
