@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
 
-        try (Cursor cursor = databaseHelper.getLatestHealthRecord()) {
+        try (Cursor cursor = databaseHelper.getTodayHealthTotals()) {
 
             if (cursor.moveToFirst()) {
 

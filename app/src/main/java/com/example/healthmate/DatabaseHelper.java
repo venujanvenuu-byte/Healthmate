@@ -114,4 +114,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result > 0;
     }
 // Delete a health record using its ID
-   }
+
+    public Cursor getTodayHealthTotals() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String today = new java.text.SimpleDateFormat(
+                "yyyy-MM-dd",
+                java.util.Locale.US
+        ).format(new java.util.Date());
+
+        return db.rawQuery(
+                "SELECT " +
+                        "COALESCE(SUM(steps), 0) AS steps, " +
+                        "COALESCE(SUM(calories), 0) AS calories, " +
+                        "COALESCE(SUM(water), 0) AS water " +
+                        "FROM " + TABLE_NAME +
+                        " WHERE record_date = ?",
+                new String[]{today}
+        );
+    }
+}
