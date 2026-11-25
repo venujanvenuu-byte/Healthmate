@@ -173,13 +173,24 @@ public class HistoryActivity extends AppCompatActivity {
                         ColorStateList.valueOf(Color.rgb(22, 132, 81))
                 );
 
+
                 btnEdit.setOnClickListener(v -> {
-                    Toast.makeText(
-                            HistoryActivity.this,
-                            "Edit Record selected",
-                            Toast.LENGTH_SHORT
-                    ).show();
+
+                    android.content.Intent intent =
+                            new android.content.Intent(
+                                    HistoryActivity.this,
+                                    EditRecordActivity.class
+                            );
+
+                    intent.putExtra("id", recordId);
+                    intent.putExtra("date", date);
+                    intent.putExtra("steps", steps);
+                    intent.putExtra("calories", calories);
+                    intent.putExtra("water", water);
+
+                    startActivity(intent);
                 });
+
 
                 recordCard.addView(btnEdit);
 
